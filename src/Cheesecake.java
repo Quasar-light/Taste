@@ -4,11 +4,11 @@ class Food {
 	int calories;
 	String name;
 
-	int calculateCaloriesLeft() {
+	int calculateCaloriesLeft(int calories) {
 
 		int caloriesLeft = 2000 - calories;
 		return caloriesLeft;
-	}
+	} 
 
 	public Food(int maxCalorie) {
 
@@ -19,6 +19,8 @@ class Food {
 	public void strawberry(int calories) {
 		this.calories = calories;
 		System.out.println("Strawberry cheesecake is: " + calories);
+		
+		System.out.println(name + "cheescake is:" + calories);
 	}
 
 	public void blueberry(String name, int calories) {
@@ -29,10 +31,7 @@ class Food {
 		System.out.println(name + " cheesecake is: " + calories);
 	}
 	
-	public void value(int value){
-		
-	}
-	
+
 }
 public class Cheesecake {
 	public static void main(String[] args) {
@@ -48,16 +47,16 @@ public class Cheesecake {
 		int value = 0;
 		value = input.nextInt();
 		
-		value = deserts.calculateCaloriesLeft();
+		value = deserts.calculateCaloriesLeft(value);
 		System.out.println("calories left: " + value);
 
-		/*if (value > 500) {
+		if (value > 500) {
 			System.out.println("invalid calorie entry");
 		}
 		else if (value <= 500){
 			System.out.println("You are close to your weight loss goal");
 			
-		} */
+		} 
 
 	}
 	
